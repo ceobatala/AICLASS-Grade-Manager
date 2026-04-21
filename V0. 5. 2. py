@@ -1,0 +1,58 @@
+print("=== AICLASS v0.5.2 - CEO Final Edition ===")
+print("Welcome Anu! Let's add student data 📚")
+
+all_marks = [] 
+all_names = []
+
+while True:
+    name = input("Student ka naam batao, ya 'done' likh ke khatam karo: ")
+    
+    if name.lower() == "done":
+        break
+    
+    all_names.append(name)
+    
+    marks_input = input(f"{name} ke 5 subjects ke marks space se dedo: ")
+    marks_list = marks_input.split() 
+    
+    total = 0
+    for mark in marks_list:
+        total = total + int(mark)
+        
+    average = total / 5
+    all_marks.append(average)
+    
+    if average >= 90:
+        grade = "A - Bahut Badhiya! CEO Material"
+    elif average >= 75:
+        grade = "B - Shabaash! Manager Level"
+    elif average >= 50:
+        grade = "C - Thik hai, mehnat karo"
+    else:
+        grade = "D - Beta padhai pe dhyan do"
+    
+    if average >= 33:
+        status = "Pass ✅"
+    else:
+        status = "Fail ❌"
+        
+    print(f"{name} ka Result: Average={average}, Grade={grade}, Status={status}")
+    print("---")
+
+print("\n=== FINAL REPORT ===")
+if len(all_marks) == 0:
+    print("Koi data nahi mila CEO")
+else:
+    class_total = 0
+    for mark in all_marks:
+        class_total = class_total + mark
+    class_avg = class_total / len(all_marks)
+    
+    topper_marks = max(all_marks)
+    topper_index = all_marks.index(topper_marks)
+    topper_name = all_names[topper_index]
+    
+    print(f"Total Students: {len(all_marks)}")
+    print(f"Class Average: {class_avg}")
+    print(f"Class ka Topper: {topper_name} with {topper_marks} marks 👑")
+    print("AICLASS v0.5.2 Complete. Batala ki Anu ne kar dikhaya! 🚀")
