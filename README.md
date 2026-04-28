@@ -1,4 +1,5 @@
-![Python](https://img.shields.io/badge/Python-3.x-blue)
+## 📸 Demo Output
+![Grade Manager Demo](demo.png)![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![BCA](https://img.shields.io/badge/BCA-1st%20Year-green)
 ![From](https://img.shields.io/badge/Made%20in-Batala%20Punjab-orange)
 
